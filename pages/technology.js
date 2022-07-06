@@ -1,3 +1,4 @@
+import styles from "../styles/Technology.module.css";
 export default function technology() {
-  return <div>technology</div>;
+  return <div className={styles.technology}>technology</div>;
 }

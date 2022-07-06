@@ -1,0 +1,35 @@
+.container{
+    margin: 0 auto;
+    text-align: center;
+}
+.heading{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2.7px;
+}
+.heading span{
+    margin-right: 1rem;
+    color:rgba(255,255,255,25%);
+}
+.img{
+    width:170px;
+    height: 170px;
+}
+.navLinks{
+    font-family: 'Barlow Condensed', sans-serif;
+    display:flex;
+    gap:1.5rem;
+    justify-content: center;
+    align-items: center;
+    color:#D0D6F9;
+    font-size: 14px;
+    letter-spacing: 2.36px;       
+}
+.navLinks a{
+    padding-bottom: 0.4rem; 
+}
+.active{
+    border-bottom: 2px solid white;
+    margin-bottom: -2px;
+}
