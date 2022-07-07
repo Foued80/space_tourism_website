@@ -10,7 +10,7 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    padding-top: 112px;
+    padding-top: 85px;
     width:73%;
     margin:0 auto;
 }
@@ -26,6 +26,7 @@
     text-transform: uppercase;
     color:white;
     font-weight: lighter;
+   
 }
 .jumbotron_main_lead{
     font-family: 'Barlow Condensed', sans-serif;
@@ -34,7 +35,7 @@
     color:#D0D6F9;
 }
 .jumbotron_explore{
-    margin-top: 4rem;
+    margin-top: 5.75rem;
     display:flex;
     justify-content: center;
     align-items: center;
