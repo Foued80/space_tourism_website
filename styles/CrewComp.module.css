@@ -9,13 +9,14 @@
     align-items: center;
     
 }
-.hero{  
-    opacity:1;
+.hero{      
     width:auto;
     height: 222px;
     transition: opacity 1.5s ease-out;  
-    margin-left: 1rem;  
+    margin-left: 1rem; 
+    animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;
 }
+
 .crew{
     border-top: 1px solid #979797;
     display:flex;
@@ -67,3 +68,12 @@
 }
 
 
+@keyframes myAnim {
+	0% {
+        opacity:0;		
+	}
+
+	100% {
+        opacity:1;		
+	}
+}

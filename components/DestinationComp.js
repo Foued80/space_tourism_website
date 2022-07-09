@@ -1,17 +1,8 @@
 import React from "react";
 import styles from "../styles/DestinationComp.module.css";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 export default function DestinationComp({ dest_data }) {
-  const [imageIsLoaded, setImageIsLoaded] = useState(false);
-  const [imgstyle, setimgstyle] = useState(styles.img);
-  useEffect(() => {
-    if (imageIsLoaded) {
-      setimgstyle(styles.img + " " + styles.imgloaded);
-    }
-  }, [imageIsLoaded]);
-
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
@@ -19,17 +10,7 @@ export default function DestinationComp({ dest_data }) {
           <span>01</span>Pick your destination
         </h5>
         <div className={styles.img_wrapper}>
-          <img
-            onLoad={(event) => {
-              const target = event.target;
-              if (target.src.indexOf("data:image/gif;base64") < 0) {
-                setImageIsLoaded(true);
-              }
-            }}
-            className={imgstyle}
-            src={dest_data.url}
-            alt=""
-          />
+          <img className={styles.img} src={dest_data.url} alt="" />
         </div>
       </div>
       <div className={styles.details}>
