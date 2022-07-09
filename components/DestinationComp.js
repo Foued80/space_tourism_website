@@ -1,63 +1,81 @@
 import React from "react";
 import styles from "../styles/DestinationComp.module.css";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
-export default function DestinationComp() {
-  const moon = {
-    url: "/assets/destination/image-moon.webp",
-    active: "moon",
-    name: "moon",
-    text: "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
-    avg: "384,400 KM",
-    est: "3 days",
-  };
+export default function DestinationComp({ dest_data }) {
+  const [imageIsLoaded, setImageIsLoaded] = useState(false);
+  const [imgstyle, setimgstyle] = useState(styles.img);
+  useEffect(() => {
+    if (imageIsLoaded) {
+      setimgstyle(styles.img + " " + styles.imgloaded);
+    }
+  }, [imageIsLoaded]);
+
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
         <h5 className={styles.heading}>
           <span>01</span>Pick your destination
         </h5>
-        <img className={styles.img} src={moon.url} alt="" />
+        <div className={styles.img_wrapper}>
+          <img
+            onLoad={(event) => {
+              const target = event.target;
+              if (target.src.indexOf("data:image/gif;base64") < 0) {
+                setImageIsLoaded(true);
+              }
+            }}
+            className={imgstyle}
+            src={dest_data.url}
+            alt=""
+          />
+        </div>
       </div>
       <div className={styles.details}>
         <div className={styles.details_navLinks}>
           <Link href="/destination/moon">
-            <a className={`${moon.active === "moon" ? styles.active : ""}`}>
+            <a
+              className={`${dest_data.active === "moon" ? styles.active : ""}`}
+            >
               moon
             </a>
           </Link>
           <Link href="/destination/mars">
-            <a className={`${moon.active === "mars" ? styles.active : ""}`}>
+            <a
+              className={`${dest_data.active === "mars" ? styles.active : ""}`}
+            >
               mars
             </a>
           </Link>
           <Link href="/destination/europa">
-            <a className={`${moon.active === "europa" ? styles.active : ""}`}>
+            <a
+              className={`${
+                dest_data.active === "europa" ? styles.active : ""
+              }`}
+            >
               europa
             </a>
           </Link>
           <Link href="/destination/titan">
-            <a className={`${moon.active === "titan" ? styles.active : ""}`}>
+            <a
+              className={`${dest_data.active === "titan" ? styles.active : ""}`}
+            >
               titan
             </a>
           </Link>
         </div>
-        <h1 className={styles.details_location}>moon</h1>
-        <p className={styles.details_description}>
-          See our planet as you’ve never seen it before. A perfect relaxing trip
-          away to help regain perspective and come back refreshed. While you’re
-          there, take in some history by visiting the Luna 2 and Apollo 11
-          landing sites.
-        </p>
+        <h1 className={styles.details_location}>{dest_data.name}</h1>
+        <p className={styles.details_description}>{dest_data.text}</p>
         <hr className={styles.details_hr} />
         <div className={styles.details_stats}>
           <div className={styles.details_dist}>
             <h2 className={styles.details_dist_title}>AVG. DISTANCE</h2>
-            <h1 className={styles.details_dist_km}>{moon.avg}</h1>
+            <h1 className={styles.details_dist_km}>{dest_data.avg}</h1>
           </div>
           <div className={styles.details_est}>
             <h2 className={styles.details_est_title}>Est. travel time</h2>
-            <h1 className={styles.details_est_km}>{moon.est} </h1>
+            <h1 className={styles.details_est_km}>{dest_data.est} </h1>
           </div>
         </div>
       </div>

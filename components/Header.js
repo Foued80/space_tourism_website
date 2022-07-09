@@ -33,9 +33,11 @@ function Header() {
           </Link>
         </li>
         <li
-          className={`${currentPath === "/destination" ? styles.active : ""}`}
+          className={`${
+            currentPath.includes("destination") ? styles.active : ""
+          }`}
         >
-          <Link href="/destination">
+          <Link href="/destination/moon">
             <a>
               <span>01</span>Destination
             </a>
