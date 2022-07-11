@@ -1,4 +1,3 @@
-import React from "react";
 import DestinationComp from "../../components/DestinationComp";
 import styles from "../../styles/Destination.module.css";
 

@@ -6,8 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }
 .hero{      
     width:auto;
@@ -31,8 +30,7 @@
     justify-content: space-between;
     align-items: center;
     width:88px;
-    height: 10px;
-    
+    height: 10px;    
 }
 .crew_link{    
     width:10px;
@@ -76,4 +74,57 @@
 	100% {
         opacity:1;		
 	}
+}
+@media screen and (min-width:768px){
+    .container{
+        margin-top: 2rem;
+        width:87%;
+        margin: 2rem auto 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;    
+    }
+
+    .crew{
+        border-top: 1px solid #979797;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .crew_role{
+        order:1;
+        margin-top: 1.6rem;
+        font-size: 24px;
+    }
+    .crew_name{
+        order:2;   
+        font-size: 40px;
+    }
+    .crew_bio{
+        order:3;
+        width:458px;       
+        font-size: 16px;
+        line-height: 28px;
+        padding: 0 ;       
+        letter-spacing: 0;
+    }
+    .crew_nav{
+        order:4;
+        margin-top: 1.5rem;          
+    }
+    .hero{      
+        width:auto;
+        height: 572px;
+        transition: opacity 1.5s ease-out;  
+        margin-left: 2.4rem; 
+        margin-top: 2.5rem;
+        animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;
+    }
+   
+
+
+
 }

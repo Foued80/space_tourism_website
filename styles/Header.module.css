@@ -47,8 +47,8 @@
 .nav_links li{ 
     list-style: none;
     text-transform: uppercase;    
-    line-height: 24px;
-    
+    line-height: 24px;  
+    height: 100%;  
 }
 .nav_closeIcon{
     width:19.09px;
@@ -110,21 +110,35 @@
     .nav_links li{ 
         height: auto;
         padding:35px 0;
-        line-height:normal;        
-        
+        line-height:normal;
     }
     .active{
         border-right: none;
-        border-bottom: 4px solid white;
-        margin-bottom: -4px;
     }
+    .active:after{
+        content:"";
+        position:absolute;
+        width:100%;
+        height: 4px;
+        left:0;
+        bottom:0;        
+        background-color: white;        
+    }
+    
     
 
 }
 @media screen and (min-width:1440px){
+   
     .header{
         margin-top: 40px;
         justify-content: flex-start;
+        width:1385px;
+        position:absolute;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
+        width:100%;
     }
     .hr{
         display:block;
@@ -138,10 +152,45 @@
     }
     .nav_links{
         width:830px;
+        justify-content: flex-start;
+        padding-left: 8rem;
+        gap:3rem;
     }
     .nav_links span{
         display:inline-flex;
     }
+    .header_logo{
+       
+        margin-left: 1rem;
+    }
+    .nav_links li{  
+        line-height: 24px;   
+        font-size: 16px; 
+        letter-spacing: 2.7px;
+        position:relative;
+    }
+    .nav_links li:hover::after{ 
+        content:"";
+        position:absolute;
+        width:100%;
+        height: 4px;
+        left:0;
+        bottom:0;        
+        background-color: rgba(255,255,255,0.5);
+        animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;      
+    }
+    @keyframes myAnim {
+        0% {
+            opacity:0;	      
+        }
+    
+        100% {
+            opacity:0.5;	       
+        }
+    }
+   
+    
+    
 
 
 }

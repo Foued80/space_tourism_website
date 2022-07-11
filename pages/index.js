@@ -3,7 +3,7 @@ function Home() {
   return (
     <div className={styles.main}>
       <div className={styles.jumbotron}>
-        <div className="jumbotron_main">
+        <div className={styles.jumbotron_main}>
           <h5 className={styles.jumbotron_main_call}>
             so, you want to travel to
           </h5>
@@ -15,8 +15,9 @@ function Home() {
             world experience!
           </p>
         </div>
-
-        <div className={styles.jumbotron_explore}>explore</div>
+        <div className={styles.jumbotron_explore_wrapper}>
+          <div className={styles.jumbotron_explore}>explore</div>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,125 @@
+.container{
+    margin-top: 2rem;
+    width:100%;
+    margin: 2rem auto 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.hero{      
+    width:100%;
+    height: 170px;
+    transition: opacity 1.5s ease-out; 
+    margin: 0; 
+    padding: 0;
+    position: relative;
+    animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;
+}
+
+.technology{    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:327px;    
+}
+.technology_nav{
+    margin-top: 2.3rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:auto;
+    height: 40px;
+    font-size: 16px;
+    gap:1rem;
+    color:white;    
+}
+.technology_link{    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.technology_linkActive{
+    background-color: #fff;
+    color:#0B0D17;
+}
+.technology_heading{
+    margin-top: 1.5rem;
+    font-size: 14px;
+    color:#D0D6F9;
+    letter-spacing: 2.36px;
+}
+.technology_name{
+    margin-top: 0;
+    color:white;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.technology_description{
+    width:100%;
+    margin-top: 1rem;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0 ;
+    color:#D0D6F9;
+    letter-spacing: 0;      
+}
+
+
+
+@keyframes myAnim {
+	0% {
+        opacity:0;		
+	}
+
+	100% {
+        opacity:1;		
+	}
+}
+
+@media screen and (min-width:768px){
+
+  
+    .hero{      
+        height: 310px; 
+        margin-top: 2rem;  
+    }
+    .technology{    
+        width:458px;
+        
+    }
+    .technology_nav{
+        margin-top: 3.8rem;
+        height: 58px;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+    .technology_link{  
+        width:58px;
+        height: 58px;
+    }
+    .technology_heading{
+        margin-top: 2.8rem;
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+    .technology_name{
+        margin-top: 0.5rem;
+        font-size: 40px;
+    }
+    .technology_description{
+        font-size: 16px;
+        line-height: 28px;  
+    }
+
+
+}
