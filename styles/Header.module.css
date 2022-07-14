@@ -89,9 +89,7 @@
         width:48px;
         height: 48px;
     }
-    .nav_links{
-        font-size: 14px;
-        letter-spacing: 2.36px;
+    .nav_links{       
         top:0;
         position:static;
         height: 100%;
@@ -100,9 +98,9 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;        
-        padding:0 3rem ;
-        margin: 0;
-        gap:0;
+        padding:0 2rem ;
+        margin: 0;  
+        gap:0.5rem;      
         backdrop-filter: blur(13px);
         background-color: rgba(255,255,255,4%);
         transform: translateX(0);    
@@ -113,6 +111,8 @@
         padding:35px 0;
         line-height:normal;
         position:relative;
+        font-size: 14px;
+        letter-spacing: 2.36px;
     }
     .active{
         border-right: none;
@@ -182,6 +182,9 @@
         bottom:0;        
         background-color: rgba(255,255,255,0.5);
         animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;      
+    }
+    .nav_links li a{ 
+        display:flex;
     }
     @keyframes myAnim {
         0% {
