@@ -108,9 +108,10 @@
         transition: all 200ms;
     }
     .nav_links li{ 
-        height: auto;
+        height: 100%;
         padding:35px 0;
         line-height:normal;
+        position:relative;
     }
     .active{
         border-right: none;
@@ -169,6 +170,7 @@
         font-size: 16px; 
         letter-spacing: 2.7px;
         position:relative;
+        height: 100%;
     }
     .nav_links li:not(.active):hover::after{ 
         content:"";

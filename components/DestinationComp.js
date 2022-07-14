@@ -48,7 +48,7 @@ export default function DestinationComp({ dest_data }) {
         </div>
         <h1 className={styles.details_location}>{dest_data.name}</h1>
         <p className={styles.details_description}>{dest_data.text}</p>
-        <hr className={styles.details_hr} />
+
         <div className={styles.details_stats}>
           <div className={styles.details_dist}>
             <h2 className={styles.details_dist_title}>AVG. DISTANCE</h2>

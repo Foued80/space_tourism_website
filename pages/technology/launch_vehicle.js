@@ -3,7 +3,7 @@ import styles from "../../styles/Technology.module.css";
 
 export default function launch_vehicle() {
   const tech_data = {
-    url: "/assets/technology/image-launch-vehicle-landscape.jpg",
+    url: "/assets/technology/image-launch-vehicle-portrait.jpg",
     index: "0",
     name: "LAUNCH VEHICLE",
     description:

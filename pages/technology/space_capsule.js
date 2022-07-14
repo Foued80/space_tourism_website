@@ -3,7 +3,7 @@ import styles from "../../styles/Technology.module.css";
 
 export default function space_capsule() {
   const tech_data = {
-    url: "/assets/technology/image-space-capsule-landscape.jpg",
+    url: "/assets/technology/image-space-capsule-portrait.jpg",
     index: "2",
     name: "SPACE CAPSULE",
     description:

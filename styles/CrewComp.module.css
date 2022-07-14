@@ -1,5 +1,4 @@
 .container{
-    margin-top: 2rem;
     width:87%;
     margin: 2rem auto 0;
     text-align: center;
@@ -7,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;    
+    
 }
 .hero{      
     width:auto;
@@ -22,6 +22,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .crew_nav{
     margin-top: 2rem;
@@ -37,19 +38,22 @@
     height: 10px;
     border-radius: 50%;
     background-color: #979797;
+    opacity:17.44%;
 }
 .crew_linkActive{
     background-color: #fff;
+    opacity:1;
 }
 .crew_role{
     margin-top: 2rem;
+    
     opacity:49.5%;
     color:white;
     font-size: 16px;
     text-transform: uppercase;
 }
 .crew_name{
-    margin-top: 0.6rem;
+    margin-top: 1rem;
     color:white;
     font-size: 24px;
     text-transform: uppercase;
@@ -76,10 +80,9 @@
 	}
 }
 @media screen and (min-width:768px){
-    .container{
-        margin-top: 2rem;
+    .container{        
         width:87%;
-        margin: 2rem auto 0;
+        margin: 3.75rem auto 0;
         text-align: center;
         display: flex;
         flex-direction: column-reverse;
@@ -88,7 +91,7 @@
     }
 
     .crew{
-        border-top: 1px solid #979797;
+        border-top: none;
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -96,7 +99,7 @@
     }
     .crew_role{
         order:1;
-        margin-top: 1.6rem;
+        margin-top: 0;
         font-size: 24px;
     }
     .crew_name{
@@ -110,10 +113,11 @@
         line-height: 28px;
         padding: 0 ;       
         letter-spacing: 0;
+        height: 4rem;
     }
     .crew_nav{
         order:4;
-        margin-top: 1.5rem;          
+        margin-top: 2.5rem;          
     }
     .hero{      
         width:auto;
@@ -122,6 +126,82 @@
         margin-left: 2.4rem; 
         margin-top: 2.5rem;
         animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;
+        
+    }
+   
+
+
+
+}
+
+@media screen and (min-width:1440px){
+    .container{        
+        width:87%;
+        margin: 3.75rem 0 0 10.4rem;
+        text-align: center;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;  
+        position:relative;
+        height: 600px;
+         
+    }
+
+    .crew{
+        border-top: none;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .crew_role{
+        order:1;
+        margin-top: 0;
+        font-size: 32px;
+    }
+    .crew_name{
+        order:2;   
+        font-size: 56px;
+    }
+    .crew_bio{
+        order:3;
+        width:458px;       
+        font-size: 18px;
+        line-height: 32px;
+        padding: 0 ;       
+        letter-spacing: 0;
+        height: 6rem;
+        text-align: left;
+        margin-top: 2rem;
+    }
+    .crew_nav{
+        order:4;
+        margin-top: 8.5rem; 
+        gap:1.5rem;  
+        width:auto;
+        height: 15px;        
+    }
+    .crew_link{    
+        width:15px;
+        height: 15px;  
+        cursor: pointer;      
+    }
+    .crew_link:not(.crew_linkActive):hover{    
+        opacity:50%; 
+        background-color: #979797;      
+    }
+
+    .hero{      
+        width:auto;
+        height: 712px;
+        transition: opacity 1.5s ease-out;  
+        margin: 0;
+        animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;
+        position: absolute;
+        bottom: 0;
+        right: 8.5rem;
+        
     }
    
 

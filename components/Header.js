@@ -43,14 +43,18 @@ function Header() {
             </a>
           </Link>
         </li>
-        <li className={`${currentPath === "/crew" ? styles.active : ""}`}>
+        <li className={`${currentPath.includes("crew") ? styles.active : ""}`}>
           <Link href="/crew">
             <a>
               <span>02</span>Crew
             </a>
           </Link>
         </li>
-        <li className={`${currentPath === "/technology" ? styles.active : ""}`}>
+        <li
+          className={`${
+            currentPath.includes("technology") ? styles.active : ""
+          }`}
+        >
           <Link href="/technology">
             <a>
               <span>03</span>Technology

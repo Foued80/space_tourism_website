@@ -51,6 +51,13 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
+    .heading{
+        padding-top: 13.25rem;
+        text-align: left;
+        font-size: 28px;
+        letter-spacing: 4.72px;
+        padding-left: 11rem;
+    }
 
 
 

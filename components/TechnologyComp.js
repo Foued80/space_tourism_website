@@ -39,9 +39,13 @@ export default function TechnologyComp({ tech_data }) {
             </div>
           </Link>
         </div>
-        <h2 className={styles.technology_heading}>THE TERMINOLOGY…</h2>
-        <div className={styles.technology_name}>{tech_data.name}</div>
-        <p className={styles.technology_description}>{tech_data.description}</p>
+        <div className={styles.technology_content}>
+          <h2 className={styles.technology_heading}>THE TERMINOLOGY…</h2>
+          <div className={styles.technology_name}>{tech_data.name}</div>
+          <p className={styles.technology_description}>
+            {tech_data.description}
+          </p>
+        </div>
       </div>
     </div>
   );

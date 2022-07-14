@@ -3,7 +3,7 @@ import styles from "../../styles/Technology.module.css";
 
 export default function spaceport() {
   const tech_data = {
-    url: "/assets/technology/image-spaceport-landscape.jpg",
+    url: "/assets/technology/image-spaceport-portrait.jpg",
     index: "1",
     name: "SPACEPORT",
     description:

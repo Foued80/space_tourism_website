@@ -1,9 +1,10 @@
 .destination{
     background-image: url("/assets/destination/background-destination-mobile.jpg");
     width:100%;
-    min-height: 100vh;
+    min-height: 110vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-position: top;
     padding-top: 60px;
     color:white;
 }
@@ -15,6 +16,7 @@
         min-height: 100vh;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        background-position: top;
     }
 
 }
@@ -25,7 +27,8 @@
         width:100%;
         min-height: 100vh;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: auto;
+        background-position: top;
     }
 
 
