@@ -48,13 +48,14 @@
     list-style: none;
     text-transform: uppercase;    
     line-height: 24px;  
-    height: 100%;  
+    height: auto; 
 }
 .nav_closeIcon{
     width:19.09px;
     height: 19.09px;
     align-self: flex-end;
     margin-right: 24px;
+    margin-bottom: 3rem;
 }
 .nav_links span{
     font-weight: bold;
