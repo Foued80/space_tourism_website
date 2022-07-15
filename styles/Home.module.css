@@ -14,10 +14,11 @@
     flex-direction: column;    
     justify-content: flex-start;
     align-items: center;
-    width:73%;
+    width:327px;
     margin-top: 7rem;
     gap:1rem;
     text-align: center;
+    padding-bottom: 3rem;
     
 }
 .jumbotron_main_call{
@@ -117,6 +118,7 @@
         margin:0 ;
         gap:0;
         height: max-content;
+        padding-bottom: 8rem;
         
     }
     .jumbotron_main{
@@ -124,7 +126,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        width:444px;
+        width:450px;
         height: 100%;  
         margin-left: 10rem;      
         

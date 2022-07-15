@@ -1,5 +1,6 @@
 import styles from "../../styles/Crew.module.css";
 import CrewComp from "../../components/CrewComp";
+import Head from "next/head";
 
 export default function anousheh_ansari() {
   const crewData = {
@@ -10,11 +11,17 @@ export default function anousheh_ansari() {
     bio: "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. ",
   };
   return (
-    <div className={styles.crew}>
-      <h5 className={styles.heading}>
-        <span>02</span>meet your crew
-      </h5>
-      <CrewComp crewData={crewData} />
-    </div>
+    <>
+      <Head>
+        <meta name="description" content="flight engeneer anousheh ansari" />
+      </Head>
+
+      <div className={styles.crew}>
+        <h5 className={styles.heading}>
+          <span>02</span>meet your crew
+        </h5>
+        <CrewComp crewData={crewData} />
+      </div>
+    </>
   );
 }

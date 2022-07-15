@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/Destination.module.css";
 import DestinationComp from "../../components/DestinationComp";
+import Head from "next/head";
 
 export default function titan() {
   const dest_data = {
@@ -12,8 +13,13 @@ export default function titan() {
     est: "7 years",
   };
   return (
-    <div className={styles.destination}>
-      <DestinationComp dest_data={dest_data} />
-    </div>
+    <>
+      <Head>
+        <meta name="description" content="destination titan" />
+      </Head>
+      <div className={styles.destination}>
+        <DestinationComp dest_data={dest_data} />
+      </div>
+    </>
   );
 }

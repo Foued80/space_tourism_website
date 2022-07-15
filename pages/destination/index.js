@@ -1,5 +1,6 @@
 import styles from "../../styles/Destination.module.css";
 import DestinationComp from "../../components/DestinationComp";
+import Head from "next/head";
 export default function destination() {
   const dest_data = {
     url: "/assets/destination/image-moon.webp",
@@ -10,8 +11,16 @@ export default function destination() {
     est: "3 days",
   };
   return (
-    <div className={styles.destination}>
-      <DestinationComp dest_data={dest_data} />
-    </div>
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="space tourism agency pick your destination"
+        />
+      </Head>
+      <div className={styles.destination}>
+        <DestinationComp dest_data={dest_data} />
+      </div>
+    </>
   );
 }

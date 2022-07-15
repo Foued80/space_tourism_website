@@ -1,5 +1,6 @@
 import DestinationComp from "../../components/DestinationComp";
 import styles from "../../styles/Destination.module.css";
+import Head from "next/head";
 
 export default function mars() {
   const dest_data = {
@@ -11,8 +12,13 @@ export default function mars() {
     est: "9 months",
   };
   return (
-    <div className={styles.destination}>
-      <DestinationComp dest_data={dest_data} />
-    </div>
+    <>
+      <Head>
+        <meta name="description" content="destination mars" />
+      </Head>
+      <div className={styles.destination}>
+        <DestinationComp dest_data={dest_data} />
+      </div>
+    </>
   );
 }

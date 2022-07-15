@@ -1,7 +1,6 @@
-import React from "react";
-
 import styles from "../../styles/Destination.module.css";
 import DestinationComp from "../../components/DestinationComp";
+import Head from "next/head";
 
 export default function europa() {
   const dest_data = {
@@ -13,8 +12,13 @@ export default function europa() {
     est: "3 years",
   };
   return (
-    <div className={styles.destination}>
-      <DestinationComp dest_data={dest_data} />
-    </div>
+    <>
+      <Head>
+        <meta name="description" content="destination europa" />
+      </Head>
+      <div className={styles.destination}>
+        <DestinationComp dest_data={dest_data} />
+      </div>
+    </>
   );
 }
